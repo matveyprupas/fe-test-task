@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Test task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You need to implement the wine slider with filters using the design and data from json. 
 
-## Available Scripts
+Here is the [Design link](https://www.figma.com/file/hgivuPu9HpDkxWqQunx8vz/Untitled?node-id=0%3A1&t=x0JoJZEahDARlToS-0)
 
-In the project directory, you can run:
+The data required to render the design is under `public/list.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this:
 
-### `npm start`
+```json
+[
+  {
+    "id": "1",
+    "name": "Primitivo Puglia",
+    "type": "semi-dry"
+  }
+]
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The same image from the design can be used for all the items.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The links to the "learn" and "shop" pages of each wine item should lead on url formed by concatenating the `id` of the wine item to the "learn" (`/learn/`) and "shop" (`/shop/`) urls.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
+- The project is bootstrapped using [Create React App](https://github.com/facebook/create-react-app)
+- Implement this design using React and Typescript.
+- Forbidden to use bootstrap or ui libraries for styling and grid
+- You can use any library for slider
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Bonus Points:
+- If you use BEM for classNames naming
