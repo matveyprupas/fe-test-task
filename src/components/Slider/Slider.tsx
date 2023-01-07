@@ -1,16 +1,19 @@
 import './Slider.css';
 import { ReactElement, useState } from "react";
 import list from '../../assets/list.json'
-import { SliderItem } from "../SliderItem";
+import { SliderItem, SliderItemInterface } from "../SliderItem";
+import { StateFiltersInterface } from '../../App';
 
-export const Slider = (): ReactElement => {
-    // console.log(list);
-    const [vineList, setVineList] = useState(list)
+interface SliderProps {
+    filters: StateFiltersInterface
+}
+
+export const Slider = ({filters}: SliderProps): ReactElement => {
+    const [vineList] = useState<SliderItemInterface[]>(list as SliderItemInterface[]);
     return (
         <>
-            <h1>Header 1. Slider</h1>
             <div className="slider_wrapper">
-                {vineList.map(el => <SliderItem key={el.id} id={el.id} name={el.name} type={el.type} />)}
+                {vineList.filter(el => filters[el.type]).map(el => <SliderItem key={el.id} id={el.id} name={el.name} type={el.type} />)}
             </div>
         </>
     );

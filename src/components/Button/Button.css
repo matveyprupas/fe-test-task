@@ -9,6 +9,15 @@
     font-weight: 600;
 }
 
+.button, path {
+    transition: all 0.3s;
+}
+
 .button:hover {
     cursor: pointer;
+    color: #690B0B;
+}
+
+.button:hover svg path {
+    fill: #690B0B;
 }

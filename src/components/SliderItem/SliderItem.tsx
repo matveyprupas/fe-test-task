@@ -3,11 +3,12 @@ import { ReactElement } from "react";
 
 import vino1 from '../../assets/vino-1.png';
 import { Button } from '../Button';
+import { Link } from 'react-router-dom';
 
 export interface SliderItemInterface {
   id: string,
   name: string,
-  type: string
+  type: 'dry' | 'semi-dry' | 'sweet'
 }
 
 export const SliderItem = ({id, name, type}: SliderItemInterface): ReactElement => {
@@ -22,8 +23,12 @@ export const SliderItem = ({id, name, type}: SliderItemInterface): ReactElement 
             <img src={vino1} alt='vino' />
           </div>
           <div className='slider-item_buttons'>
-            <Button text='Learn' onClick={()=> console.log('Learn Clicked')} />
-            <Button text='Shop' onClick={()=> console.log('Shop Clicked')} />
+            <Link to={`learn/${id}`} className={'slider-item_link'} >
+              <Button text='Learn' onClick={()=> console.log('Learn Clicked')} />
+            </Link>
+            <Link to={`shop/${id}`} className={'slider-item_link'} >
+              <Button text='Shop' onClick={()=> console.log('Shop Clicked')} />
+            </Link>
           </div>
         </div>
       </div>

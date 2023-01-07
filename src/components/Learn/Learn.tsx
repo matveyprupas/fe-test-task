@@ -5,6 +5,6 @@ export const Learn = (): ReactElement => {
   const { id } = useParams();
 
     return (
-      <h1>Header 1. Learn about wine with id: {id}</h1>
+      <h1>LEARN. Vine ID: {id}</h1>
     );
   }

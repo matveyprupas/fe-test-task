@@ -5,6 +5,6 @@ export const Shop = (): ReactElement => {
   const { id } = useParams();
 
     return (
-      <h1>Header 1. There you can buy vine with id: {id}</h1>
+      <h1>SHOP. Vine ID: {id}</h1>
     );
   }
