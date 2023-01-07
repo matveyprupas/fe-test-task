@@ -1,0 +1,6 @@
+.slider_wrapper {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    gap: 50px;
+}

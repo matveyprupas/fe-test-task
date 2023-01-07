@@ -4,9 +4,9 @@
 }
 
 .app_container {
-  background-color: pink;
+  /* background-color: pink; */
   box-sizing: border-box;
-  padding: 110px 105px 0;
+  padding: 110px 105px 200px;
   margin: auto;
   max-width: 1440px;
 }
