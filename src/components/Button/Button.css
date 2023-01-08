@@ -9,6 +9,15 @@
     font-weight: 600;
 }
 
+.button.button__disabled {
+    color: #AEADAD;
+    border-color: #AEADAD;
+}
+
+.button.button__disabled svg path {
+    fill: #AEADAD;
+}
+
 .button, path {
     transition: all 0.3s;
 }
@@ -16,8 +25,23 @@
 .button:hover {
     cursor: pointer;
     color: #690B0B;
+    border-color: #690B0B;
 }
 
 .button:hover svg path {
     fill: #690B0B;
+}
+
+.button.button__disabled:hover {
+    cursor: auto;
+    color: #AEADAD;
+    border-color: #AEADAD;
+}
+
+.button.button__disabled:hover svg path {
+    fill: #AEADAD;
+}
+
+.button.button_icon__rotate {
+    transform: rotate(180deg);
 }

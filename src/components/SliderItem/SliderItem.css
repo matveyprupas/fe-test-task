@@ -35,3 +35,10 @@
 .slider-item_link {
     text-decoration: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .slider-item_container {
+        min-width: 254px;
+        max-width: 254px;
+    }
+}

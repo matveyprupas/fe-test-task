@@ -4,9 +4,20 @@
 }
 
 .app_container {
-  /* background-color: pink; */
   box-sizing: border-box;
-  padding: 110px 105px 200px;
+  padding: 110px 105px 0;
   margin: auto;
   max-width: 1440px;
+}
+
+@media screen and (max-width: 1200px) {
+  .app_container {
+    padding: 70px 60px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app_container {
+    padding: 70px 24px 0;
+  }
 }
